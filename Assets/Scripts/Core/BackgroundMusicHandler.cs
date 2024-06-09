@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class BackgroundMusicHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private AudioSource _backgroundMusic;
+
+    private void Awake()
     {
-        
+        DontDestroyOnLoad(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        _backgroundMusic.Play();
+    }
+
+    private void OnDisable()
+    {
+        _backgroundMusic.Stop();
     }
 }

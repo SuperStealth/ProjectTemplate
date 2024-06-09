@@ -1,3 +1,4 @@
+using Game.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +17,14 @@ namespace Game.Views
         private void OnEnable()
         {
             settingsButton.onClick.AddListener(OpenSettings);
+            restartButton.onClick.AddListener(RestartGame);
         }
         
+        private void RestartGame()
+        {
+            SceneLoader.LoadMainScene();
+        }
+
         private void OpenSettings()
         {
             settingsWindow.Show();
@@ -26,6 +33,7 @@ namespace Game.Views
         private void OnDisable()
         {
             settingsButton.onClick.RemoveListener(OpenSettings);
+            restartButton.onClick.RemoveListener(RestartGame);
         }
     }
 }

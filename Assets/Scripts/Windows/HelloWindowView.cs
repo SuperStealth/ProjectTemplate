@@ -1,9 +1,7 @@
 using Game.Core;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
+
 namespace Game.Views
 {
     public class HelloWindowView : MonoBehaviour

@@ -1,23 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundMusicHandler : MonoBehaviour
+namespace Game.Core
 {
-    [SerializeField] private AudioSource _backgroundMusic;
-
-    private void Awake()
+    public class BackgroundMusicHandler : MonoBehaviour
     {
-        DontDestroyOnLoad(this);
-    }
+        [SerializeField] private AudioSource _backgroundMusic;
 
-    private void OnEnable()
-    {
-        _backgroundMusic.Play();
-    }
+        private void Awake()
+        {
+            DontDestroyOnLoad(this);
+        }
 
-    private void OnDisable()
-    {
-        _backgroundMusic.Stop();
+        private void OnEnable()
+        {
+            _backgroundMusic.Play();
+        }
+
+        private void OnDisable()
+        {
+            _backgroundMusic.Stop();
+        }
     }
 }

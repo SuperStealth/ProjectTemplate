@@ -14,6 +14,13 @@ namespace Game.Views
         [Header("Windows")]
         [SerializeField] private SettingsWindow settingsWindow;
 
+        private LoadingWindow loadingWindow;
+
+        private void Awake()
+        {
+            loadingWindow = AssetsContainer.Instance.LoadingWindow;
+        }
+
         private void OnEnable()
         {
             settingsButton.onClick.AddListener(OpenSettings);
@@ -22,7 +29,8 @@ namespace Game.Views
         
         private void RestartGame()
         {
-            SceneLoader.LoadMainScene();
+            loadingWindow.Show();
+            SceneLoader.LoadMainScene(loadingWindow.UpdateSceneLoaded);
         }
 
         private void OpenSettings()

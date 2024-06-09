@@ -1,18 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
+using System;
 using UnityEngine;
 
-public class WindowAnimator : MonoBehaviour
+namespace Game.Views.Utils
 {
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(RectTransform))]
+    public class WindowAnimator : MonoBehaviour
     {
-        
-    }
+        private RectTransform _rectTransform;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public Action OnWindowHidden;
+
+        private Sequence _sequence;
+
+        private void Awake()
+        {
+            _rectTransform = GetComponent<RectTransform>();
+        }
+
+        public void Show()
+        {
+            if (_sequence == null)
+            {
+                _sequence = DOTween.Sequence();
+            }
+            _sequence.Append(_rectTransform.DOAnchorPosY(_rectTransform.rect.size.y, 0));
+            _sequence.Append(_rectTransform.DOAnchorPosY(0, 3));
+        }
+
+        public void Hide()
+        {
+            if (_sequence == null)
+            {
+                _sequence = DOTween.Sequence();
+            }
+            _sequence.Append(_rectTransform.DOAnchorPosY(-_rectTransform.rect.size.y, 3));
+            _sequence.onComplete = DisableWindow;
+        }
+
+        private void DisableWindow()
+        {
+            OnWindowHidden?.Invoke();
+            _sequence = null;
+        }
     }
 }

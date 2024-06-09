@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Game.Core
@@ -18,9 +20,10 @@ namespace Game.Core
             DontDestroyOnLoad(this);
         }
 
-        public static void LoadMainScene()
+        public static void LoadMainScene(UnityAction<Scene, LoadSceneMode> onSceneLoaded)
         {
             SceneManager.LoadSceneAsync(MainSceneId);
+            SceneManager.sceneLoaded += onSceneLoaded;
         }
     }
 }

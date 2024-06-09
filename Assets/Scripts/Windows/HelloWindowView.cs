@@ -16,8 +16,8 @@ namespace Game.Views
         private void OpenMainScreen()
         {
             var loadingWindow = AssetsContainer.Instance.LoadingWindow;
+            loadingWindow.OnWindowShown = () => SceneLoader.LoadMainScene(loadingWindow.UpdateSceneLoaded);
             loadingWindow.Show();
-            SceneLoader.LoadMainScene(loadingWindow.UpdateSceneLoaded);
         }
 
         private void OnDisable()

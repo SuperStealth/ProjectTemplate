@@ -1,3 +1,4 @@
+using Game.Views.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ namespace Game.Views
         [SerializeField] private Toggle musicToggle;
         [SerializeField] private Toggle soundsToggle;
 
+        [SerializeField] private WindowAnimator animator;
+
         private void OnEnable()
         {
             musicToggle.onValueChanged.AddListener(ToggleMusic);
@@ -19,6 +22,7 @@ namespace Game.Views
         public void Show()
         {
             gameObject.SetActive(true);
+            animator.Show();
         }
 
 
@@ -34,6 +38,12 @@ namespace Game.Views
         }
 
         private void Close()
+        {
+            animator.Hide();
+            animator.OnWindowHidden += CloseAfterAnimationEnded;
+        }
+
+        private void CloseAfterAnimationEnded()
         {
             gameObject.SetActive(false);
         }

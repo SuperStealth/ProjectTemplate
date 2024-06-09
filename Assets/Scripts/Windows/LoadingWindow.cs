@@ -1,4 +1,5 @@
 using Game.Views.Utils;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,8 @@ namespace Game.Views
     {
         [SerializeField] private WindowAnimator animator;
 
+        public Action OnWindowShown;
+
         private void Awake()
         {
             animator.OnWindowHidden += DisableWindow;
@@ -16,6 +19,7 @@ namespace Game.Views
         public void Show()
         {
             gameObject.SetActive(true);
+            animator.OnWindowShown += OnWindowShown;
             animator.Show();
         }
 

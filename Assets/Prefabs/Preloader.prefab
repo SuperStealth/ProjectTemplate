@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 115182700062780110}
   - component: {fileID: 6534531676783928543}
   - component: {fileID: 5580305768580298489}
+  - component: {fileID: 1600437529364951328}
   m_Layer: 5
   m_Name: Preloader
   m_TagString: Untagged
@@ -238,3 +239,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSpeed: 1
+--- !u!225 &1600437529364951328
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789662569268474780}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

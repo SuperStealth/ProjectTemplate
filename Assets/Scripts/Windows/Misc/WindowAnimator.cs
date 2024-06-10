@@ -23,10 +23,11 @@ namespace Game.Views.Utils
 
         public void Show()
         {
-            if (_sequence == null)
+            if (_sequence != null)
             {
-                _sequence = DOTween.Sequence();
+                _sequence.Kill();
             }
+            _sequence = DOTween.Sequence();
             _sequence.Append(_rectTransform.DOAnchorPosY(_rectTransform.rect.size.y, 0));
             _sequence.Append(_rectTransform.DOAnchorPosY(0, animationSpeed));
             _sequence.onComplete = UpdateWindowShown;
@@ -34,10 +35,11 @@ namespace Game.Views.Utils
 
         public void Hide()
         {
-            if (_sequence == null)
+            if (_sequence != null)
             {
-                _sequence = DOTween.Sequence();
+                _sequence.Kill();
             }
+            _sequence = DOTween.Sequence();
             _sequence.Append(_rectTransform.DOAnchorPosY(-_rectTransform.rect.size.y, animationSpeed));
             _sequence.onComplete = DisableWindow;
         }

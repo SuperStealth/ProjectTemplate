@@ -29,8 +29,8 @@ namespace Game.Views
         
         private void RestartGame()
         {
+            loadingWindow.OnWindowShown = () => SceneLoader.LoadMainScene(loadingWindow.UpdateSceneLoaded);
             loadingWindow.Show();
-            SceneLoader.LoadMainScene(loadingWindow.UpdateSceneLoaded);
         }
 
         private void OpenSettings()

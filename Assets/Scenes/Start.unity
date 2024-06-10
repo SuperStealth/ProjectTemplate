@@ -1189,7 +1189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297934468946333269, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 5297934468946333269, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1243,6 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2864ffce0d5c449b42582a6bfde98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationSpeed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

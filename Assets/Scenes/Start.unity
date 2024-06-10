@@ -283,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb0ec415a20f7f4d949535c23de9bfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSounds:
+  - {fileID: 1426929949}
 --- !u!1 &181954715
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +408,7 @@ GameObject:
   - component: {fileID: 495771171}
   - component: {fileID: 495771172}
   m_Layer: 0
-  m_Name: AssetsContainer
+  m_Name: GameContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -438,7 +440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 495771170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327c572ff80f1f54ea08e9e3d7a5f184, type: 3}
+  m_Script: {fileID: 11500000, guid: d7dd0fb1ce9a03547952f52d24510e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadingWindow: {fileID: 8629086476446575564}
@@ -1041,6 +1043,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2094720084}
     m_Modifications:
+    - target: {fileID: 1718270690068558988, guid: 7448b20926aee9a43b61d79fa104f47e, type: 3}
+      propertyPath: SoundName
+      value: ClickSound
+      objectReference: {fileID: 0}
     - target: {fileID: 2223648677174836579, guid: 7448b20926aee9a43b61d79fa104f47e, type: 3}
       propertyPath: m_Name
       value: HelloWindow
@@ -1125,6 +1131,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7674649067082156838, guid: 7448b20926aee9a43b61d79fa104f47e, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 1426929949}
+    - target: {fileID: 7674649067082156838, guid: 7448b20926aee9a43b61d79fa104f47e, type: 3}
+      propertyPath: gameContainer
+      value: 
+      objectReference: {fileID: 495771172}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1252,8 +1266,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 181954717}
   - {fileID: 495771171}
+  - {fileID: 181954717}
   - {fileID: 761785392}
   - {fileID: 2094720084}
   - {fileID: 60892189}

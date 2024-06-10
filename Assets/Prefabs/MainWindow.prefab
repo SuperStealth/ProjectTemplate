@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8072929234747792437}
   - component: {fileID: 4329085466040117347}
   - component: {fileID: 5434995567513679168}
-  - component: {fileID: 2446577185501788945}
+  - component: {fileID: 3720476734326986844}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2446577185501788945
+--- !u!114 &3720476734326986844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2319173979277023984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c1a4edcb1ef71a498b8303f80f856cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  SoundName: 
 --- !u!1 &3346493247149471249
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ GameObject:
   - component: {fileID: 8549213835883911797}
   - component: {fileID: 283235440986462640}
   - component: {fileID: 6231874202727926937}
-  - component: {fileID: 4256574251964853361}
+  - component: {fileID: 7860747386970032296}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4256574251964853361
+--- !u!114 &7860747386970032296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3346493247149471249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c1a4edcb1ef71a498b8303f80f856cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  SoundName: 
 --- !u!1 &6124619240134726573
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,8 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c16e1f4a13f054c8ef843cfd13ca87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartButton: {fileID: 2446577185501788945}
-  settingsButton: {fileID: 4256574251964853361}
+  restartButton: {fileID: 3720476734326986844}
+  settingsButton: {fileID: 7860747386970032296}
   settingsWindow: {fileID: 0}
 --- !u!1 &7943812590486093356
 GameObject:

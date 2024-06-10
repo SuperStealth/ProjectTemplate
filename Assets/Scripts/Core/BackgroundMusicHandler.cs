@@ -11,7 +11,7 @@ namespace Game.Core
         private void Awake()
         {
             DontDestroyOnLoad(this);
-            _settingsContainer = AssetsContainer.Instance.SettingsContainer;
+            _settingsContainer = GameContainer.SettingsContainer;
         }
 
         private void OnEnable()

@@ -1,4 +1,5 @@
 using Game.Core;
+using Game.Utils;
 using Game.Views.Utils;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,7 @@ namespace Game.Views
 {
     public class SettingsWindow : MonoBehaviour
     {
-        [SerializeField] private Button closeButton;
+        [SerializeField] private SoundButton closeButton;
         [SerializeField] private Toggle musicToggle;
         [SerializeField] private Toggle soundsToggle;
 
@@ -17,12 +18,13 @@ namespace Game.Views
 
         private void Awake()
         {
-            _settingsContainer = AssetsContainer.Instance.SettingsContainer;
+            _settingsContainer = GameContainer.SettingsContainer;
         }
 
         private void OnEnable()
         {
             UpdateWindow();
+            closeButton.SetSound("ClickSound");
             musicToggle.onValueChanged.AddListener(ToggleMusic);
             soundsToggle.onValueChanged.AddListener(ToggleSounds);
             closeButton.onClick.AddListener(Close);

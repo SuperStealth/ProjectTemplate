@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8324776255730777464}
   - component: {fileID: 7211427617504052369}
   - component: {fileID: 4330481275223896458}
+  - component: {fileID: 6441209314460220709}
   m_Layer: 5
   m_Name: SettingsWindow
   m_TagString: Untagged
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745b7159604207d4baad08d09b1b8b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeButton: {fileID: 3827751885254205673}
+  closeButton: {fileID: 7127074830459682730}
   musicToggle: {fileID: 7762169984691560999}
   soundsToggle: {fileID: 4794701519307262239}
   animator: {fileID: 4330481275223896458}
@@ -109,6 +110,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSpeed: 1
+--- !u!225 &6441209314460220709
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794486284455252585}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2260347713976103850
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +381,7 @@ GameObject:
   - component: {fileID: 6898979366558759386}
   - component: {fileID: 8489809619786952040}
   - component: {fileID: 7620226824375826983}
-  - component: {fileID: 3827751885254205673}
+  - component: {fileID: 7127074830459682730}
   m_Layer: 5
   m_Name: Close
   m_TagString: Untagged
@@ -434,7 +447,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3827751885254205673
+--- !u!114 &7127074830459682730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,7 +456,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5785926532523363657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c1a4edcb1ef71a498b8303f80f856cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -478,6 +491,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  SoundName: ClickSound
 --- !u!1 &6325364679253911849
 GameObject:
   m_ObjectHideFlags: 0

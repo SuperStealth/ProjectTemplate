@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace Game.Core
 {
-    public class AssetsContainer : MonoBehaviour
+    public class GameContainer : MonoBehaviour
     {
         [SerializeField] private LoadingWindow loadingWindow;
         [SerializeField] private SoundsContainer soundsContainer;
         [SerializeField] private SettingsContainer settingsContainer;
 
-        public static AssetsContainer Instance {get; private set;}
+        public static GameContainer Instance { get; private set; }
 
-        public SettingsContainer SettingsContainer { get => settingsContainer; }
-        public SoundsContainer SoundsContainer { get => soundsContainer; }
+        public static SettingsContainer SettingsContainer { get => Instance.settingsContainer; }
+        public static SoundsContainer SoundsContainer { get => Instance.soundsContainer; }
 
-        public LoadingWindow LoadingWindow { get => loadingWindow; }
+        public static LoadingWindow LoadingWindow { get => Instance.loadingWindow; }
 
         private void Awake()
         {

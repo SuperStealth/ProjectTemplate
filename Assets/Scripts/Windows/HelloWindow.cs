@@ -1,22 +1,24 @@
 using Game.Core;
+using Game.Utils;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game.Views
 {
-    public class HelloWindowView : MonoBehaviour
+    public class HelloWindow : MonoBehaviour
     {
-        [SerializeField] private Button nextButton;
-        [SerializeField] private AssetsContainer assetsContainer;
+        [SerializeField] private SoundButton nextButton;
+        [SerializeField] private GameContainer gameContainer;
+        [SerializeField] private AudioSource buttonSound;
 
         private void OnEnable()
         {
             nextButton.onClick.AddListener(OpenMainScreen);
+            nextButton.SetSound(buttonSound);
         }
 
         private void OpenMainScreen()
         {
-            var loadingWindow = AssetsContainer.Instance.LoadingWindow;
+            var loadingWindow = GameContainer.LoadingWindow;
             loadingWindow.OnWindowShown = () => SceneLoader.LoadMainScene(loadingWindow.UpdateSceneLoaded);
             loadingWindow.Show();
         }

@@ -247,6 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 106820193}
+  - component: {fileID: 106820194}
   m_Layer: 0
   m_Name: SoundsContainer
   m_TagString: Untagged
@@ -270,6 +271,18 @@ Transform:
   - {fileID: 1426929950}
   m_Father: {fileID: 495771171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &106820194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106820192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb0ec415a20f7f4d949535c23de9bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &181954715
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingWindow: {fileID: 8629086476446575564}
+  soundsContainer: {fileID: 106820194}
+  settingsContainer: {fileID: 944050097}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +596,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -672,6 +687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 944050096}
+  - component: {fileID: 944050097}
   m_Layer: 0
   m_Name: SettingsContainer
   m_TagString: Untagged
@@ -694,6 +710,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 495771171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944050097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944050095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c006f6bacb021da4badcfc5e01c4da4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1426929948
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,11 +854,6 @@ Transform:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6469203700519031153, guid: 7448b20926aee9a43b61d79fa104f47e, type: 3}
   m_PrefabInstance: {fileID: 8547111184396302171}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1735060557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3789662569268474780, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
-  m_PrefabInstance: {fileID: 8629086476446575562}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1927596161
 GameObject:
@@ -1203,17 +1226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6534531676783928543, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 8629086476446575567}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3789662569268474780, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8629086476446575567}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
 --- !u!224 &8629086476446575563 stripped
 RectTransform:
@@ -1225,33 +1241,20 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6534531676783928543, guid: dc9149ff1dd79f745a245281b7f9430e, type: 3}
   m_PrefabInstance: {fileID: 8629086476446575562}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735060557}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2db86a9d06f43e47b29e24b35b24b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8629086476446575567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735060557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a2864ffce0d5c449b42582a6bfde98d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationSpeed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 181954717}
-  - {fileID: 761785392}
   - {fileID: 495771171}
+  - {fileID: 761785392}
   - {fileID: 2094720084}
   - {fileID: 60892189}
   - {fileID: 246068290}

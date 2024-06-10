@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8680558434035977958}
   - component: {fileID: 115182700062780110}
   - component: {fileID: 6534531676783928543}
+  - component: {fileID: 5580305768580298489}
   m_Layer: 5
   m_Name: Preloader
   m_TagString: Untagged
@@ -223,3 +224,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2db86a9d06f43e47b29e24b35b24b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 5580305768580298489}
+--- !u!114 &5580305768580298489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789662569268474780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2864ffce0d5c449b42582a6bfde98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 1

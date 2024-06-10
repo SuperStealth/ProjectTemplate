@@ -7,6 +7,7 @@ namespace Game.Views
     public class HelloWindowView : MonoBehaviour
     {
         [SerializeField] private Button nextButton;
+        [SerializeField] private AssetsContainer assetsContainer;
 
         private void OnEnable()
         {

@@ -1,7 +1,6 @@
 using Game.Core;
 using Game.Utils;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game.Views
 {
